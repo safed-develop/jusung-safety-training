@@ -536,3 +536,53 @@ video {
     color: #555;
     text-align: center;
 }
+
+/*퀴즈*/
+.quiz-box {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.quiz-question {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #222;
+    text-align: left;
+}
+
+.quiz-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #222;
+}
+
+.quiz-options li {
+    margin: 1rem 0;
+    text-align: left;
+    color: #222;
+    padding-left: 2.4rem;
+    position: relative;
+}
+
+.quiz-options li::before {
+    content: attr(data-index);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.checked {
+    color: #145233;
+    font-weight: 500;
+}
+
+.checked .check-icon {
+    color: #145233;
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+}
