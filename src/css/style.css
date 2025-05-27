@@ -14,7 +14,7 @@ html {
 body {
     width: 100%;
     max-width: 430px;
-    margin: 0 auto;
+    margin: 0 auto!important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #fff;
     color: #000;
@@ -49,7 +49,6 @@ html {
 
 body {
     width: 100%;
-    max-width: 430px;
     margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
     background: linear-gradient(to bottom, #5a7263, #1d3b2e);
@@ -62,7 +61,6 @@ body {
 
 body.main {
     width: 100%;
-    max-width: 430px;
     margin: 0 auto;
     font-family: 'Noto Sans KR', sans-serif;
     background: linear-gradient(to bottom, #5a7263, #1d3b2e);
@@ -161,12 +159,17 @@ body::after {
 input, select {
     width: 100%;
     padding: 1rem;
-    margin: 0.5rem 0 1.5rem;
+    /*margin: 0.5rem 0 1.5rem;*/
     font-size: 1.4rem;
     border: 1px solid #ccc;
     border-radius: 0.3rem;
 }
 
+label{    color: #222;
+    font-size: 13px;
+    text-align: left;
+    display: block;
+    letter-spacing: -1px;}
 .birth-group, .tel-group {
     display: flex;
     gap: 1rem;
@@ -203,4 +206,257 @@ input, select {
 .btn-next {
     background-color: #1d3b2e;
     color: white;
+}
+/* 하단 버튼 그룹 고정 */
+.btn-group {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 430px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.6rem;
+    /*box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);*/
+    box-sizing: border-box;
+}
+
+.btn-back, .btn-next {
+    width: 48%;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.btn-back {
+    background: white;
+    border: 1px solid #1d3b2e;
+    color: #1d3b2e;
+}
+
+.btn-next {
+    background-color: #1d3b2e;
+    color: white;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+}
+
+/* 헤더 (상단 고정) */
+.header {
+    padding: 2rem 1.6rem 1rem;
+    background-color: #1d3b2e;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* 메인 컨텐츠 (스크롤 영역) */
+.page-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem 1.6rem 8rem; /* 하단 버튼 공간 확보 */
+    box-sizing: border-box;
+}
+
+.page-title {
+    font-size: 17px;
+    font-weight: bold;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1rem;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+label {
+    display: block;
+    font-size: 1.4rem;
+    margin: 1.6rem 0 0.6rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+}
+
+.birth-group,
+.tel-group {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.birth-group input {
+    flex: 1.5;
+}
+
+.birth-group select,
+.tel-group input {
+    flex: 1;
+}
+
+/*이용약관*/
+
+
+.terms-all-check {
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.terms-all-check span{
+    display: block;
+    text-align: center;
+}
+
+.terms-all-check label input {
+    margin-right: 0.8rem;
+}
+
+.terms-box {
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.terms-box h3 {
+    font-size: 15px;
+    margin-bottom: 0.6rem;
+    color: #1d3b2e;
+    letter-spacing: -1px;
+    text-align: left;
+}
+
+.terms-content {
+    background-color: #fff;
+    padding: 1rem;
+    font-size:12px;
+    height: 120px;
+    overflow-y: auto;
+    margin-bottom: 1.2rem;
+    color: #555;
+    text-align: left;
+}
+
+.terms-content.oath {
+    background-color: #fff;
+    padding: 1rem;
+    font-size:12px;
+    height: 450px;
+    overflow-y: auto;
+    margin-bottom: 1.2rem;
+    color: #555;
+    text-align: left;
+}
+
+.terms-check label{
+    margin: 1rem 0 1.5rem;
+}
+.terms-check {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.terms-check input {
+    margin-right: 0.8rem;
+    width: 20px;
+}
+
+.sub_title{
+    color:#333;
+    text-align: left;
+    letter-spacing: -1px;
+    font-size: 15px;
+    margin-bottom: 7px;
+    border-left: 4px solid #1d3b2e;
+    padding-left: 7px;
+}
+
+/*사인창*/
+.sign {
+    position: absolute;
+    bottom: 100px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 5rem auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 상단 제목 */
+.sign-header {
+    background-color: #1d3b2e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* 서명 영역 */
+.sign-body {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.sign-text {
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+}
+
+/* 버튼 영역 */
+.sign-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.sign-footer button {
+    flex: 1;
+    padding: 1.2rem 0;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-confirm {
+    background-color: #1d3b2e;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #1d3b2e;
+    border-left: 1px solid #ccc;
 }
