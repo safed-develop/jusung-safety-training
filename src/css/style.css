@@ -586,3 +586,80 @@ video {
     font-size: 1.6rem;
     margin-right: 0.5rem;
 }
+
+
+/*이수증*/
+.certificate {
+    padding: 4rem 2rem;
+    background: #fff;
+}
+
+.certificate-icon {
+    font-size: 4rem;
+    color: #2d7a46;
+    margin-bottom: 1rem;
+}
+
+.certificate-title {
+    font-size: 2.6rem;
+
+    letter-spacing: -1px;
+    font-weight: bold;
+    color: #222;
+}
+
+.certificate-sub {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.certificate-info {
+    font-size: 1.4rem;
+    text-align: left;
+    display: inline-block;
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+    color: #222;
+}
+
+.certificate-info p {
+    margin: 0.5rem 0;
+    color: #222;
+}
+
+.certificate-notice {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 4rem;
+}
+
+.certificate-logo {
+    margin-top: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.05);
+}
+
+/* 롤링 배너 공통 */
+.rolling-banner {
+    height: 15px;
+    background: url(logo.svg) repeat-x center;
+    background-size: contain;
+    background-color: #2a543d;
+    animation: roll 10s linear infinite;
+}
+
+/* 위쪽 반전 */
+.top-banner {
+    transform: scaleY(-1);
+}
+
+@keyframes roll {
+    from {
+        background-position: 0 center;
+    }
+    to {
+        background-position: 100% center;
+    }
+}
