@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=430, initial-scale=1.0, viewport-fit=cover">
+
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>정보입력</title>
+</head>
+<body>
+<header class="header">
+    <img src="logo.png" alt="JUSUNG LOGO" class="logo">
+    <p class="subtitle">안전교육 프로그램</p>
+    <h2 class="step-title">정보입력</h2>
+</header>
+
+<main class="page-container">
+    <h3 class="page-title">교육 이수자 정보입력</h3>
+
+    <label>👤 성함</label>
+    <input type="text" placeholder="이름 입력">
+
+    <label>📅 생년월일</label>
+    <div class="birth-group">
+        <input type="text" placeholder="1990년">
+        <select><option>1월</option></select>
+        <select><option>1일</option></select>
+    </div>
+
+    <label>🏢 회사명</label>
+    <input type="text" placeholder="회사명 입력">
+
+    <label>📞 전화번호</label>
+    <div class="tel-group">
+        <input type="text" placeholder="010">
+        <input type="text">
+        <input type="text">
+    </div>
+
+    <div class="btn-group">
+        <button class="btn-back">이전</button>
+        <button class="btn-next">다음 →</button>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* 전체 박스 모델 및 여백 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 루트 폰트 사이즈 (px 기준 계산 시 1rem = 10px) */
+html {
+    font-size: 10px;
+}
+
+/* 바디 기본 설정 */
+body {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #fff;
+    color: #000;
+    word-break: keep-all;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 이미지 반응형 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 링크 초기화 */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(to bottom, #5a7263, #1d3b2e);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body.main {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    background: linear-gradient(to bottom, #5a7263, #1d3b2e);
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 배경 패턴 이미지 추가 시 */
+body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: url('background-pattern.png') no-repeat center bottom / cover;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* 로고 */
+.logo {
+    width: 60%;
+    max-width: 240px;
+    height: auto;
+}
+
+/* 제목 텍스트 */
+.title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* 시작 버튼 */
+.start-btn {
+    width: 90%;
+    max-width: 390px;
+    margin: 0 auto;
+    font-size: 2rem;
+    padding: 1.2rem 0;
+    background-color: #193225;
+    border: none;
+    color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: block;
+}
+
+/*form.html*/
+.header {
+    background-color: #1d3b2e;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.page-container {
+    background-color: #f2f2f2;
+    padding: 2rem;
+    height: fit-content;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    border-bottom: 1px solid #333;
+    margin-bottom: 2rem;
+    color: #222;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+}
+
+.birth-group, .tel-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.birth-group input {
+    flex: 1;
+}
+.birth-group select,
+.tel-group input {
+    flex: 1;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.btn-back, .btn-next {
+    width: 48%;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.btn-back {
+    background: white;
+    border: 1px solid #1d3b2e;
+    color: #1d3b2e;
+}
+
+.btn-next {
+    background-color: #1d3b2e;
+    color: white;
+}
