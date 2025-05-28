@@ -644,16 +644,13 @@ video {
 /* 롤링 배너 공통 */
 .rolling-banner {
     height: 15px;
-    background: url(logo.svg) repeat-x center;
-    background-size: contain;
+    background: url("../img/logo.svg") repeat-x center;
+    background-size: 40px;
     background-color: #2a543d;
     animation: roll 10s linear infinite;
 }
 
-/* 위쪽 반전 */
-.top-banner {
-    transform: scaleY(-1);
-}
+
 
 @keyframes roll {
     from {
@@ -663,3 +660,11 @@ video {
         background-position: 100% center;
     }
 }
+
+/*헤더*/
+header {display: flex;
+    justify-content: center;
+flex-direction: column;
+align-items: center;
+    padding-bottom: 20px!important;
+    padding-top: 20px;}
