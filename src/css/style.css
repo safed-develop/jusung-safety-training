@@ -566,7 +566,6 @@ video {
     margin: 1rem 0;
     text-align: left;
     color: #222;
-    padding-left: 2.4rem;
     position: relative;
 }
 
@@ -682,3 +681,52 @@ header {display: flex;
 
 .form label svg{
     margin-right: 5px;}
+
+
+.quiz-options {
+    list-style-type: none; /* 기본 번호 숨김 */
+    counter-reset: item;
+    padding-left: 10px; /* 체크 아이콘 + 번호 여유 공간 */
+    position: relative;
+}
+
+.quiz-options li {
+    position: relative;
+    cursor: pointer;
+    color: black;
+    user-select: none;
+    margin-bottom: 6px;
+}
+
+/* 번호 직접 생성 */
+.quiz-options li::before {
+    counter-increment: item;
+    content: "①②③④⑤"[counter(item) - 1]; /* 동그라미 번호 */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: normal;
+    color: black;
+}
+
+/* 체크 아이콘 */
+.quiz-options li .check-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: green;
+    font-weight: bold;
+    display: none;
+    user-select: none;
+}
+
+/* 체크 시 스타일 */
+.quiz-options li.checked {
+    color: green;
+}
+
+.quiz-options li.checked .check-icon {
+    display: inline-block;
+}

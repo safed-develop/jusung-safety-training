@@ -22,9 +22,9 @@
         </p>
 
         <ul class="quiz-options">
-            <li class="checked"><span class="check-icon">✔</span> 1m 이상 고소(사다리) 작업</li>
+            <li class="checked"><span class="check-icon">✔</span>① 1m 이상 고소(사다리) 작업</li>
             <li>② Sub Fab 출입</li>
-            <li class="checked"><span class="check-icon">✔</span> 중량물 취급작업</li>
+            <li class="checked"><span class="check-icon">✔</span>③ 중량물 취급작업</li>
             <li>④ 크레인 작업</li>
             <li>⑤ 공구 사용작업</li>
         </ul>
@@ -39,4 +39,24 @@
 
 </main>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const options = document.querySelectorAll('.quiz-options li');
+
+        options.forEach(option => {
+            // 체크 아이콘이 없으면 생성 (최초 한번만)
+            if (!option.querySelector('.check-icon')) {
+                const checkSpan = document.createElement('span');
+                checkSpan.classList.add('check-icon');
+                checkSpan.textContent = '✔';
+                option.prepend(checkSpan);
+            }
+
+            option.addEventListener('click', () => {
+                option.classList.toggle('checked');
+            });
+        });
+    });
+</script>
+
 </html>
