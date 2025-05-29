@@ -592,12 +592,17 @@ video {
 .certificate {
     padding: 4rem 2rem;
     background: #fff;
+    height: 500px;
 }
 
 .certificate-icon {
     font-size: 4rem;
     color: #2d7a46;
     margin-bottom: 1rem;
+}
+.certificate-icon img{
+    width: 40px;
+    margin: 0 auto;
 }
 
 .certificate-title {
@@ -612,6 +617,7 @@ video {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     color: #222;
+    letter-spacing: -1px;
 }
 
 .certificate-info {
@@ -621,6 +627,8 @@ video {
     line-height: 2.2rem;
     margin-bottom: 3rem;
     color: #222;
+    font-weight: 600;
+    font-family: 'Noto Serif KR', serif;
 }
 
 .certificate-info p {
