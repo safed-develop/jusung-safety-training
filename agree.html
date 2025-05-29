@@ -51,8 +51,39 @@
     </main>
     <div class="btn-group">
         <button class="btn-back">이전</button>
-        <button class="btn-next">다음 →</button>
+        <button class="btn-next" onclick="location.href='oath.html'">다음 →</button>
     </div>
 </main>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const allCheck = document.querySelector('.terms-all-check input[type="checkbox"]');
+        const subChecks = document.querySelectorAll('.terms-box input[type="checkbox"]');
+
+        allCheck.addEventListener('change', () => {
+            subChecks.forEach(checkbox => {
+                checkbox.checked = allCheck.checked;
+            });
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btnNext = document.querySelector('.btn-next');
+        const requiredCheckboxes = document.querySelectorAll('.terms-box input[type="checkbox"]');
+
+        btnNext.addEventListener('click', (e) => {
+            const allChecked = Array.from(requiredCheckboxes).every(cb => cb.checked);
+            if (!allChecked) {
+                e.preventDefault();
+                alert('필수 항목에 모두 동의해야 합니다.');
+            } else {
+                // 다음 페이지 이동 로직 여기 추가 (필요 시)
+            }
+        });
+    });
+</script>
+
+
+
 </html>

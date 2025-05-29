@@ -195,12 +195,14 @@ label{    color: #222;
     padding: 1.2rem;
     border: none;
     border-radius: 0.4rem;
+    cursor: pointer;
 }
 
 .btn-back {
     background: white;
     border: 1px solid #1d3b2e;
     color: #1d3b2e;
+    cursor: pointer;
 }
 
 .btn-next {
@@ -219,7 +221,6 @@ label{    color: #222;
     display: flex;
     justify-content: space-between;
     padding: 1.2rem 1.6rem;
-    /*box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);*/
     box-sizing: border-box;
 }
 
@@ -644,8 +645,10 @@ video {
 /* 롤링 배너 공통 */
 .rolling-banner {
     height: 15px;
-    background: url("../img/logo.svg") repeat-x center;
-    background-size: 40px;
+    background:
+            url(../img/logo.svg) repeat-x;
+    background-size: 50px 15px; /* 40px에서 50px로 늘려 간격 확보 */
+    background-position: center;
     background-color: #2a543d;
     animation: roll 10s linear infinite;
 }
@@ -664,7 +667,18 @@ video {
 /*헤더*/
 header {display: flex;
     justify-content: center;
-flex-direction: column;
-align-items: center;
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 20px!important;
     padding-top: 20px;}
+
+
+.form label{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.form label svg{
+    margin-right: 5px;}

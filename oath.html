@@ -6,6 +6,12 @@
 
     <link rel="stylesheet" href="src/css/style.css">
     <title>서약서</title>
+    <style>
+        .sign {
+            display: none; /* 기본 숨김 */
+        }
+    </style>
+
 </head>
 <body>
 <header class="header">
@@ -48,4 +54,30 @@
 
 </main>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btnNext = document.querySelector('.btn-next');
+        const signBox = document.querySelector('.sign');
+
+        btnNext.addEventListener('click', () => {
+            signBox.style.display = 'block';  // sign 박스 보이기
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const btnNext = document.querySelector('.btn-next');
+        const btnCancel = document.querySelector('.btn-cancel');
+        const signBox = document.querySelector('.sign');
+
+        btnNext.addEventListener('click', () => {
+            signBox.style.display = 'block';
+        });
+
+        btnCancel.addEventListener('click', () => {
+            signBox.style.display = 'none';
+        });
+    });
+</script>
+
+
 </html>
