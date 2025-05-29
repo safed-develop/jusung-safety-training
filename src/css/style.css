@@ -366,8 +366,8 @@ input, select {
 .terms-content.oath {
     background-color: #fff;
     padding: 1rem;
-    font-size:12px;
-    height: 450px;
+    font-size:13px;
+    height: 500px;
     overflow-y: auto;
     margin-bottom: 1.2rem;
     color: #555;
@@ -729,4 +729,65 @@ header {display: flex;
 
 .quiz-options li.checked .check-icon {
     display: inline-block;
+}
+
+
+/*서약서*/
+.oath_title{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    letter-spacing: -1px;
+}
+.terms-content.oath p{
+    background: #f4f4f4;
+    height: 330px;
+    padding: 10px;
+    line-height: 1.7;
+    overflow-y: scroll;
+
+}
+
+
+/*서명*/
+/*폰트 쉐리프체 추가*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+.signature-section{
+    display: flex;
+    justify-content: center;
+}
+
+.signature-section{
+    margin-top: 20px;}
+
+.signature-section .signature-date,.signature-section .signature-name{
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 600;
+}
+
+.signature-image {
+    position: relative;
+    width: 120px;
+    height: 40px;
+}
+
+.signature-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.signature-image::after {
+    content: "(서명 또는 인)";
+    position: absolute;
+    bottom: 10px;
+    right: 25px;
+    font-size: 15px;
+    color: #aaa;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
 }
