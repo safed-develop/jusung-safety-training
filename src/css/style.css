@@ -751,7 +751,7 @@ header {display: flex;
 }
 .terms-content.oath p{
     background: #f4f4f4;
-    height: 330px;
+    /*height: 330px;*/
     padding: 10px;
     line-height: 1.7;
 
@@ -844,3 +844,13 @@ header {display: flex;
 
 .failed .btn-next{
     width: 100%;}
+
+.signature-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.terms-content.oath
+{
+    position: relative;
+}
+
