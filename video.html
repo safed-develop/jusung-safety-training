@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=430, initial-scale=1.0, viewport-fit=cover">
 
     <link rel="stylesheet" href="src/css/style.css">
-    <title>서약서</title>
+    <title>교육이수 영상시청</title>
 </head>
 <body>
 <header class="header">
@@ -18,7 +18,13 @@
     <h3 class="page-title">교육이수 영상시청</h3>
 
     <div class="video-wrapper">
-        <video id="training-video" src="video.mp4" poster="thumbnail.jpg"></video>
+        <iframe id="training-video"
+                src="https://www.youtube.com/embed/tu9mHC7H_Kw?si=D0IW9b9nhUXsee6b"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                style="width: 100%; height: 240px;">
+        </iframe>
         <div class="video-overlay" onclick="playVideo()">
             <div class="play-button">▶</div>
         </div>
@@ -26,10 +32,10 @@
 
     <div class="btn-group">
         <button class="btn-back">이전</button>
-        <button class="btn-next">다음</button>
+        <button class="btn-next" onclick="showCompletionPopup()">다음</button>
     </div>
 
-    <div class="sign">
+    <div class="sign" style="">
         <div class="sign-header">시청 완료</div>
         <div class="sign-body complete-body">
             <div class="check-icon">✔</div>
@@ -37,19 +43,25 @@
             <div class="complete-desc">확인을 누르면 테스트를 시작합니다.</div>
         </div>
         <div class="sign-footer">
-            <button class="btn-confirm">확 인</button>
-            <button class="btn-cancel">취 소</button>
+            <button class="btn-confirm" onclick="location.href='test.html'">확 인</button>
+            <button class="btn-cancel" onclick="hideCompletionPopup()">취 소</button>
         </div>
     </div>
 
+
+
 </main>
-</body>
+
 <script>
     function playVideo() {
-        const video = document.getElementById('training-video');
+        const iframe = document.getElementById('training-video');
         const overlay = document.querySelector('.video-overlay');
-        video.play();
+        if (!iframe.src.includes('autoplay=1')) {
+            iframe.src += (iframe.src.includes('?') ? '&' : '?') + 'autoplay=1';
+        }
         overlay.style.display = 'none';
     }
+
 </script>
+</body>
 </html>

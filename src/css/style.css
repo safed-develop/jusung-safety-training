@@ -356,7 +356,7 @@ input, select {
     background-color: #fff;
     padding: 1rem;
     font-size:12px;
-    height: 120px;
+    height: 150px;
     overflow-y: auto;
     margin-bottom: 1.2rem;
     color: #555;
@@ -365,13 +365,14 @@ input, select {
 
 .terms-content.oath {
     background-color: #fff;
-    padding: 1rem;
-    font-size:13px;
+    padding: 10px;
+    font-size: 13px;
     height: 500px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     margin-bottom: 1.2rem;
     color: #555;
     text-align: left;
+    border: 1px solid #dedede;
 }
 
 .terms-check label{
@@ -470,7 +471,7 @@ input, select {
     max-width: 100%;
     background-color: #edf0ee;
     border: 1px solid #ccc;
-    padding-top: 56.25%; /* 16:9 비율 유지 */
+    /*padding-top: 56.25%; !* 16:9 비율 유지 *!*/
     overflow: hidden;
     border-radius: 4px;
 }
@@ -598,7 +599,7 @@ video {
 .certificate-icon {
     font-size: 4rem;
     color: #2d7a46;
-    margin-bottom: 1rem;
+    margin-bottom: 25px;
 }
 .certificate-icon img{
     width: 40px;
@@ -753,7 +754,6 @@ header {display: flex;
     height: 330px;
     padding: 10px;
     line-height: 1.7;
-    overflow-y: scroll;
 
 }
 
@@ -799,3 +799,48 @@ header {display: flex;
     pointer-events: none;
     user-select: none;
 }
+
+.oath .terms-content.oath p{
+    background-color: #fff;
+    height: 520px;
+}
+
+/*불합격*/
+.result-failed {
+    margin: 40px auto;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 50px 0;
+}
+
+.result-icon {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+}
+
+.result-message {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.result-message .highlight {
+    color: #b32a10; /* 짙은 빨간색 */
+}
+
+.result-submessage {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+
+.failed .btn-next{
+    width: 100%;}
